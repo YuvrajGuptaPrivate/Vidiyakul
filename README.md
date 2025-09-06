@@ -1,29 +1,67 @@
-Overview
-Vidiyakul is an Android video player app built with a clean architecture approach. It allows users to select and play videos, saving their playback position so they can resume where they left off.
+# 🎬 Vidiyakul - Android Video Player App
 
-Features
-Browse and select from multiple videos
+**Vidiyakul** is an Android video player app built with **Clean Architecture**.  
+It allows users to **browse, play videos with ExoPlayer, and resume from the last playback position**.  
 
-Play videos using ExoPlayer
+---
 
-Save playback timestamps in Room database
+## 🚀 Features
+- 📂 Browse and select from multiple videos  
+- 🎥 Play videos using **ExoPlayer**  
+- 💾 Save playback timestamps in **Room database**  
+- ⏯ Resume playback using **ViewModel**  
+- 📡 Handles **no-internet scenarios** gracefully  
+- 🖼 Modular UI with **Jetpack Compose**  
 
-Resume playback from saved position using ViewModel
+---
 
-Handles no-internet scenarios gracefully
+## 🏗 Architecture
+- **Data Layer**  
+  - Room Database, DAO, Models, Repositories, Network Utils  
 
-Modular UI with Jetpack Compose composables
+- **Presentation Layer**  
+  - Jetpack Compose Screens: `Home`, `VideoPlayer`, `No Internet`  
+  - ViewModels for state management  
+  - Reusable composables and themes  
 
-Architecture
-Data Layer: Handles database (Room), DAO, models, repositories, and network utilities
+---
 
-Presentation Layer: Contains UI, themes, ViewModels, and screens (Home, VideoPlayer, No Internet)
+## 📱 Screens
+1. **Home Screen**  
+   - Displays video list  
+   - Passes `Video ID` to Video Player screen  
 
-Uses ViewModel for state management and composable widgets for reusable UI components
+2. **Video Player Screen**  
+   - Fetches video info (description, URL, etc.)  
+   - Plays video with **ExoPlayer**  
+   - Saves playback position in Room  
 
-How to Run
-Clone the repo and open in Android Studio
+3. **No Internet Screen**  
+   - Shown when there’s no connectivity  
 
-Ensure required dependencies (ExoPlayer, Room, Jetpack Compose) are included
+---
 
-Build and run on an Android device or emulator
+## ⚙️ Setup Instructions
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/Vidiyakul.git
+   cd Vidiyakul
+
+
+## for Testing 
+
+👉 **Important Note**
+
+The main goal of this project was to:
+1. Achieve **playback persistency** (saving and resuming video timestamps with Room)
+2. Build a **Minimum Viable Product (MVP)** following clean architecture
+
+Because of that:
+- The app currently plays **one hardcoded demo video URL** with ExoPlayer  
+- The `url` field in the `Video` model is present but **not used yet**  
+- Each video item is identified by a **unique `videoId`**, along with its title and description  
+- Playback progress is stored in Room **per `videoId`**  
+
+ This ensures that even if every item plays the same demo file, each is treated as an **independent video with its own saved playback position**  
+
+In the future, when multiple working video URLs are available, the app can immediately start using the `url` field — no architectural changes required.
