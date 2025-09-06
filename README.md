@@ -69,7 +69,7 @@ In the future, when multiple working video URLs are available, the app can immed
 
 ## 📲 Download & Demo
 
-- 📥 **APK Download**: [Click here to download our.apk]([https://your-link-here.com](https://drive.google.com/file/d/1mB8GAUxXdRwWuFfrNMp8NMl-vSQYB9YA/view?usp=sharing))  
+- 📥 **APK Download**: [Click here to download our.apk](https://your-link-here.com](https://drive.google.com/file/d/1mB8GAUxXdRwWuFfrNMp8NMl-vSQYB9YA/view?usp=sharing)  
 - ▶️ **Demo Video**: [Watch the demo](https://your-demo-video-link.com)
 
 
