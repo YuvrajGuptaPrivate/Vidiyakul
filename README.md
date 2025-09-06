@@ -65,3 +65,11 @@ Because of that:
  This ensures that even if every item plays the same demo file, each is treated as an **independent video with its own saved playback position**  
 
 In the future, when multiple working video URLs are available, the app can immediately start using the `url` field — no architectural changes required.
+
+
+## 📲 Download & Demo
+
+- 📥 **APK Download**: [Click here to download our.apk]([https://your-link-here.com](https://drive.google.com/file/d/1mB8GAUxXdRwWuFfrNMp8NMl-vSQYB9YA/view?usp=sharing))  
+- ▶️ **Demo Video**: [Watch the demo](https://your-demo-video-link.com)
+
+
