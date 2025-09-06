@@ -72,4 +72,13 @@ In the future, when multiple working video URLs are available, the app can immed
 - 📥 **APK Download**: [Click here to download our.apk](https://drive.google.com/file/d/1mB8GAUxXdRwWuFfrNMp8NMl-vSQYB9YA/view?usp=sharing)  
 - ▶️ **Demo Video**: [Watch the demo](https://your-demo-video-link.com)
 
+- **Full Demo Video**: [Watch Demo on Google Drive]([https://drive.google.com/file/d/1WQZQsWOtHUcFv4AswLfOSrbmTDdEhDt5/view?usp=sharing](https://drive.google.com/file/d/1WQZQsWOtHUcFv4AswLfOSrbmTDdEhDt5/view?usp=sharing)  
+
+### 🔎 Demo Notes
+- In this demo, my **two different videos are merged into one playable file**  
+- This was intentional for the MVP stage, since the goal was **persistency and clean architecture** rather than multiple streams  
+- **There is no crash** — playback works smoothly, and timestamps are saved per unique `videoId`  
+- This proves the persistence layer (Room + ViewModel) works correctly even when multiple video items map to the same playable source
+  
+
 
