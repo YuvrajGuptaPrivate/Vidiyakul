@@ -2,6 +2,8 @@ package com.example.vidiyakul.presentation.view.widgets
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -28,18 +30,20 @@ fun VideoItem(video: Video, modifier: Modifier = Modifier) {
 
         Row(
             modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.Top
         ) {
             Text(
                 text = video.name,
-                fontSize = 16.sp,
-                modifier = Modifier.weight(1f)
-            )
+                modifier = Modifier.weight(1f),
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onSurface)
+
             Text(
                 text = video.totalTime,
                 fontSize = 14.sp,
-                modifier = Modifier.align(Alignment.CenterVertically)
-            )
+                modifier = Modifier.align(Alignment.CenterVertically),
+                color = MaterialTheme.colorScheme.onSurfaceVariant)
+
         }
     }
 }
