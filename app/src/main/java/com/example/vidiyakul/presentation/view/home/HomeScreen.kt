@@ -1,5 +1,6 @@
 package com.example.vidiyakul.presentation.view.home
 
+import android.content.Intent
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -63,9 +64,7 @@ fun HomeScreen(navController: NavHostController, viewmodel: VideoPlayerViewModel
                 navigationIcon = {
                     IconButton(
                         onClick = {
-                            coroutineScope.launch {
-                                snackbarHostState.showSnackbar("This feature is coming soon")
-                            }
+                            navController.navigate("paidbatch")
                         }
                     ) {
                         Icon(Icons.Default.Person, tint = MaterialTheme.colorScheme.primary,contentDescription = "Profile")

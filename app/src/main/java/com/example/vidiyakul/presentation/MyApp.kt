@@ -12,6 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.vidiyakul.presentation.view.DisplayPaidBatches
 import com.example.vidiyakul.presentation.view.videoplayer.VideoPlayerScreen
 import com.example.vidiyakul.presentation.view.home.HomeScreen
 import com.example.vidiyakul.presentation.view.nonetwork.NoInternetScreen
@@ -45,6 +46,9 @@ fun MyApp(viewmodel: VideoPlayerViewModel) {
                 }
                 composable("noInternet") {
                     NoInternetScreen(navController)
+                }
+                composable("paidbatch") {
+                    DisplayPaidBatches()
                 }
             }
         }

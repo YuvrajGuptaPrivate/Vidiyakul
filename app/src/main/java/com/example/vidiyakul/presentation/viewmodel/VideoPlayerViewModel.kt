@@ -135,7 +135,7 @@ class VideoPlayerViewModel(val repository: VideoRepository) : ViewModel() {
 
         _exoPlayer = ExoPlayer.Builder(context).build().apply {
             val mediaItem = MediaItem.fromUri(
-                "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.mp4/.m3u8"
+                "https://content.jwplatform.com/manifests/vM7nH0Kl.m3u8"
             )
             setMediaItem(mediaItem)
 
