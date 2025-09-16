@@ -23,6 +23,8 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -60,6 +62,7 @@ fun DisplayPaidBatches (){
 
     val scrollState = rememberScrollState()
 
+    var isVideo by remember { mutableStateOf(false) }
     var expanded by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
@@ -92,7 +95,31 @@ fun DisplayPaidBatches (){
 
         Spacer(Modifier.height(180.dp))
 
-            CustomPagerWidget(list,isVideo = true)
+        Button(modifier = Modifier.height(56.dp),
+
+            onClick = {
+                isVideo = !isVideo
+        },
+            shape = RoundedCornerShape(50),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFF036ECB),
+                contentColor = Color.White
+            ),
+            elevation = ButtonDefaults.buttonElevation(defaultElevation = 6.dp)) {
+            var textlable : String
+            if (isVideo == true){ textlable ="Move To Image View"}else{textlable = "Move to Video View"}
+            Text(textlable)
+        }
+
+        Spacer(Modifier.height(30.dp))
+
+
+        if (isVideo){
+            CustomPagerWidget(list,isVideo)
+        }else{
+            CustomPagerWidget(shortsIds,isVideo)
+        }
+
 
             Spacer(Modifier.height(30.dp))
 

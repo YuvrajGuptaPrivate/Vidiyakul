@@ -33,9 +33,9 @@ import kotlin.math.absoluteValue
 fun CustomPagerWidget(list: List<String>, isVideo : Boolean ) {
 
     val gradientColors = listOf(
-        Color(0xFF7B62E9), // hsla(251, 76%, 65%, 1)
-        Color(0xFF543AE3), // hsla(249, 75%, 56%, 1)
-        Color(0xFF321EB4)  // hsla(248, 71%, 41%, 1)
+        Color(0xFF7B62E9),
+        Color(0xFF543AE3),
+        Color(0xFF321EB4)
     )
 
     Box(
@@ -88,12 +88,12 @@ fun CustomPagerWidget(list: List<String>, isVideo : Boolean ) {
                 ) {
                     if (isVideo){
                         VideoPlayer(
-                            videoUrl = list[centerIndex],
+                            videoUrl = list[page],
                             playWhenReady = pagerState.settledPage == page,
                             modifier = Modifier.matchParentSize()
                         )
                     }else{
-                        ImagePlayer(list[centerIndex])
+                        ImagePlayer(list[page])
                     }
                 }
             }
